@@ -1,9 +1,9 @@
 pipeline {
-	agent {docker {image 'node:alpine3.17'}} // This is the agent that will execute the pipeline
+	agent {docker {image maven:3.6.3'}} // This is the agent that will execute the pipeline
 	stages {
 		stage('Build') {
 			steps {
-				sh "node --version"
+				sh "mvn --version"
 				echo "Building the app"
 			}
 		}	
