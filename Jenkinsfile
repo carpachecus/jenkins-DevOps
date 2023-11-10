@@ -1,8 +1,9 @@
 pipeline {
-	agent any
+	agent {docker {image 'maven:3.6.3-openjdk-11-slim'}} // This is the agent that will execute the pipeline
 	stages {
 		stage('Build') {
 			steps {
+				sh "mvn --version"
 				echo "Building the app"
 			}
 		}	
