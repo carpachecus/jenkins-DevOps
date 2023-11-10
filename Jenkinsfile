@@ -1,5 +1,5 @@
 pipeline {
-	agent {docker {image maven:3.6.3'}} // This is the agent that will execute the pipeline
+	agent {docker {image maven:3.6.3'}} 
 	stages {
 		stage('Build') {
 			steps {
@@ -14,7 +14,7 @@ pipeline {
 		}
 		stage ('Integration test') {
 			steps {
-				echo "Integration the app"
+			echo "Integration the app"
 			}
 		}
 	}
@@ -37,3 +37,4 @@ pipeline {
 		}
 	}
 }
+	
